@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coral: #ff6b5e;
+  --color-coral-deep: #c8412f;
+  --color-coral-tint: #ffedea;
+  --color-ink: #1a2b2a;
+  --color-ink-2: #3a4b48;
+  --color-muted: #7b8a86;
+  --color-cream: #f6f1e7;
+  --color-card: #ffffff;
+  --color-surface-2: #efe8d9;
+  --color-line: #e4dccb;
+  --color-on-coral: #ffffff;
+  --color-crown: #e8a23d;
+  --color-success: #1f7a48;
+  --color-warn: #c58a1e;
+  --color-danger: #b91c1c;
+  --color-avatar-savoury: #ff6b5e;
+  --color-avatar-mango: #ffb02e;
+  --color-avatar-hibiscus: #e8467c;
+  --color-avatar-sky: #4aa3df;
+  --color-avatar-leaf: #46a85a;
+  --color-avatar-turquoise: #1fb8a6;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-wordmark: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 10px;
+  --radius-chip: 12px;
+  --radius-card: 14px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card:
+    0 0 0 1px rgb(26 43 42 / 0.04),
+    0 1px 2px rgb(26 43 42 / 0.05),
+    0 8px 20px rgb(26 43 42 / 0.04);
+  --shadow-card-hover:
+    0 0 0 1px rgb(26 43 42 / 0.07),
+    0 2px 6px rgb(26 43 42 / 0.06),
+    0 12px 28px rgb(26 43 42 / 0.06);
+
+  --ease-kibaz: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-kibaz: 180ms;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100dvh;
+    background: var(--color-cream);
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  img {
+    outline: 1px solid rgb(26 43 42 / 0.08);
+    outline-offset: -1px;
+  }
+}
+
+@layer utilities {
+  .font-wordmark {
+    font-family: var(--font-wordmark);
+  }
+
+  .ease-kibaz {
+    transition-timing-function: var(--ease-kibaz);
+  }
+
+  .duration-kibaz {
+    transition-duration: var(--duration-kibaz);
+  }
+
+  .hide-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

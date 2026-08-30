@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Kibaz">
+  <rect width="32" height="32" rx="8" fill="#F6F1E7"/>
+  <path fill="#FF6B5E" d="M6 24h20v-4l0-8-4 5L16 8l-6 9-4-5v8z"/>
+  <rect x="6" y="22.2" width="20" height="2.2" rx="0.5" fill="#C8412F"/>
+  <circle cx="16" cy="8.2" r="1.7" fill="#E8A23D"/>
+</svg>
